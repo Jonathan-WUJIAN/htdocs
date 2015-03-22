@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "FORBIDDEN AREA"
+AuthUserfile "../htdocs/forbidden/.htpasswd"
+Require valid-user
+<FilesMatch "^(wp-login|wp-log)\.php$">
+Header set Set-Cookie wordpress_test_cookie=WP+Cookie+check
+</FilesMatch>
